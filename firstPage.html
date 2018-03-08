@@ -1,0 +1,50 @@
+<! DOCTYPE  html>
+<html>
+<head>
+	<title>This is First lesson</title>
+	
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+	<h1> This is first lesson</h1>
+	<div>Aung</div>
+	<div>Sherry</div>
+	<div>Maru</div>
+
+	<script defer>
+
+		let hexColVal = ["a", "b", "c", "d", "e", "f", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+		let rN = ()=>{
+			return Math.floor(Math.random() * 16);
+		}
+		let getRandomColor = ()=> {
+			let col = "#";
+			while(col.length < 7){
+				col += hexColVal[rN()];   
+			}
+			return col;
+		}
+		
+		$( "div" ).hover(function() {
+				let ranColor = getRandomColor();
+				$(this).css( "background-color", ranColor);     // set background color
+  				var color = $( this ).css( "background-color" );  // get the background color
+  				let data = this.firstChild.data;
+  				if(data === "Sherry"){
+  					let hearts = "&hearts;";
+  					$("h1").html("<span style='color:" + color + ";'>"+ hearts + " " + hearts + " " + data + "</span>");
+
+  				}else{
+  					$( "h1" ).html("<span style='color:" +  
+    				color + ";'>" + data + "</span>");
+  				}
+		});
+
+	</script>
+
+</body>
+</html>
+
