@@ -2,4 +2,4 @@
 # Hover to change background color randomly
 # Show hearts for my gf
 # CSS, jQuery, javaScript
-# and a lot of funs.
+# And a lot of funs.
